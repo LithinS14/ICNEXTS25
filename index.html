@@ -1,387 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICNEXTS'25 - International Conference</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICNEXTS'25 - International Conference</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-main">
-            <div class="header-content">
-                <div class="logo-container">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Engg-Logo-New-c0hAbvnLguP5Ux5M1VbRpTufHpaRR0.png" alt="St. Joseph's College of Engineering Logo" class="logo">
-                </div>
-                <div class="title-container">
-                    <h1 class="main-title">ICNEXTS'25</h1>
-                    <h2 class="subtitle">
-                        International Conference on NextGen Engineering Technologies and Applications for Sustainable Development
-                    </h2>
-                    <p class="organized-by">Organised by</p>
-                    <p class="college-name">St. Joseph's College of Engineering, Chennai, India</p>
-                </div>
-            </div>
-        </div>
+<div id="header-placeholder"></div>
 
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="guidelines.html" class="nav-link">Guidelines</a>
-                    <a href="committees.html" class="nav-link">Committees</a>
-                    <a href="speakers.html" class="nav-link">Speakers</a>
-                    <a href="call-for-papers.html" class="nav-link">Call for Papers</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="registration.html" class="nav-link">Registration</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="update-banner">
-            <div class="update-content">
-                <span class="update-label">Latest Update</span>
-                <span class="update-text">
-                    Welcome to International Conference ICNEXTS'25 - Call for Papers now open! Early bird registration available until March 2025.
-                </span>
-            </div>
-        </div>
-    </header>
-
-    <!-- College Slideshow -->
-    <section class="slideshow-section">
-        <div class="container">
-            <div class="slideshow-container">
-                <div class="slide active">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/College%20Building.jpg-HeMnwucSwxtqwPvxS1REs9Sn4RcwW5.jpeg" alt="St. Joseph's College of Engineering - Campus Aerial View">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-caption">
-                        <div class="caption-box">
-                            <h3 class="caption-title">Campus Overview</h3>
-                            <p class="caption-subtitle">St. Joseph's College of Engineering, Chennai</p>
-                        </div>
+<!-- College Slideshow -->
+<section class="slideshow-section">
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/College%20Building.jpg-HeMnwucSwxtqwPvxS1REs9Sn4RcwW5.jpeg" alt="St. Joseph's College of Engineering - Campus Aerial View">
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <div class="caption-box">
+                        <h3 class="caption-title">Campus Overview</h3>
+                        <p class="caption-subtitle">St. Joseph's College of Engineering, Chennai</p>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_0065.JPG-xHAvsOxFqJwZMPthmbKqoRHc3V2dwv.jpeg" alt="St. Joseph's College of Engineering - Central Library">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-caption">
-                        <div class="caption-box">
-                            <h3 class="caption-title">Central Library</h3>
-                            <p class="caption-subtitle">St. Joseph's College of Engineering, Chennai</p>
-                        </div>
+            </div>
+            <div class="slide">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_0065.JPG-xHAvsOxFqJwZMPthmbKqoRHc3V2dwv.jpeg" alt="St. Joseph's College of Engineering - Central Library">
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <div class="caption-box">
+                        <h3 class="caption-title">Central Library</h3>
+                        <p class="caption-subtitle">St. Joseph's College of Engineering, Chennai</p>
                     </div>
-                </div>
-                <div class="slide">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Admin%20Block.jpg-g3QZNC77ejhj4WNnZkQikOwimisSbA.jpeg" alt="St. Joseph's College of Engineering - Admin Block">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-caption">
-                        <div class="caption-box">
-                            <h3 class="caption-title">Administration Block</h3>
-                            <p class="caption-subtitle">St. Joseph's College of Engineering, Chennai</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide-dots">
-                    <button class="dot active" onclick="currentSlide(1)"></button>
-                    <button class="dot" onclick="currentSlide(2)"></button>
-                    <button class="dot" onclick="currentSlide(3)"></button>
-                </div>
-
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="slide">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Admin%20Block.jpg-g3QZNC77ejhj4WNnZkQikOwimisSbA.jpeg" alt="St. Joseph's College of Engineering - Admin Block">
+                <div class="slide-overlay"></div>
+                <div class="slide-caption">
+                    <div class="caption-box">
+                        <h3 class="caption-title">Administration Block</h3>
+                        <p class="caption-subtitle">St. Joseph's College of Engineering, Chennai</p>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="content-container">
-            <!-- About Sections -->
-            <div class="space-y-8">
-                <!-- About College Card -->
+            <div class="slide-dots">
+                <button class="dot active" onclick="currentSlide(1)"></button>
+                <button class="dot" onclick="currentSlide(2)"></button>
+                <button class="dot" onclick="currentSlide(3)"></button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="main-content">
+    <div class="content-container">
+        <!-- About Sections -->
+        <div class="space-y-8">
+            <!-- About College Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">About College</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-text text-justify">
+                        St. Joseph's College of Engineering, established in 1994, is an autonomous institute located in Chennai, Tamil Nadu. The college is affiliated to Anna University, approved by AICTE, and accredited by NBA and NAAC. We have achieved 1541 ranks including 57 Gold medals and 55 Silver medals.
+                    </p>
+                    <p class="card-text text-justify">
+                        Continuously being ranked in NIRF since 2017. Accredited with A+ grade by securing 3.46 on a scale of 4.00 by NAAC. We have 45 Sponsored Research projects worth Rs. 2.83 Crores funded by AICTE, NRB, DST, SERB, DBT, NRDMS, TNSCST & Anna University.
+                    </p>
+                    <p class="card-text text-justify">
+                        Recognized as 'Scientific and Industrial Research Organisation (SIRO)' since 2014 by DSIR, Government of India. College has secured 4.5-star rating for activities carried out in the campus by Institution's Innovation Council (IIC). Consistently awarded "National Employability Award" every year since 2017 by Aspiring Minds.
+                    </p>
+                </div>
+            </div>
+
+            <!-- About Department and Conference Cards -->
+            <div class="grid grid-cols-2">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">About College</h2>
+                        <h2 class="card-title">About Department</h2>
                     </div>
                     <div class="card-content">
                         <p class="card-text text-justify">
-                            St. Joseph's College of Engineering, established in 1994, is an autonomous institute located in Chennai, Tamil Nadu. The college is affiliated to Anna University, approved by AICTE, and accredited by NBA and NAAC. We have achieved 1541 ranks including 57 Gold medals and 55 Silver medals.
+                            The Department of Electronics and Communication Engineering with state-of-the-art research facilities and well-qualified faculty members produces young aspiring Engineers ever since its inception in 1994. The department is accredited by NBA and offers PG (M.E Applied Electronics) under Anna University, Chennai.
                         </p>
                         <p class="card-text text-justify">
-                            Continuously being ranked in NIRF since 2017. Accredited with A+ grade by securing 3.46 on a scale of 4.00 by NAAC. We have 45 Sponsored Research projects worth Rs. 2.83 Crores funded by AICTE, NRB, DST, SERB, DBT, NRDMS, TNSCST & Anna University.
+                            The department is recognized by Anna University as Nodal Centre for research since 2010 and offers Ph.D program for both part-time and full-time scholars. We are well equipped with laboratories including RF & Microwave Lab, Communication System Lab, Signal Processing Lab, Networks Lab, Optical Communication Lab, VLSI and Embedded Lab.
                         </p>
                         <p class="card-text text-justify">
-                            Recognized as 'Scientific and Industrial Research Organisation (SIRO)' since 2014 by DSIR, Government of India. College has secured 4.5-star rating for activities carried out in the campus by Institution's Innovation Council (IIC). Consistently awarded "National Employability Award" every year since 2017 by Aspiring Minds.
+                            The department consistently strives for overall development of students through career development and placement activities. Our faculty enrich their knowledge through continuing education, technical consultancy, and R&D. We have produced successful Electronics and Communication Engineers with prominent employers. We have two MODROBS grants from AICTE and a funded project from ISRO.
                         </p>
                     </div>
                 </div>
 
-                <!-- About Department and Conference Cards -->
-                <div class="grid grid-cols-2">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">About Department</h2>
-                        </div>
-                        <div class="card-content">
-                            <p class="card-text text-justify">
-                                The Department of Electronics and Communication Engineering with state-of-the-art research facilities and well-qualified faculty members produces young aspiring Engineers ever since its inception in 1994. The department is accredited by NBA and offers PG (M.E Applied Electronics) under Anna University, Chennai.
-                            </p>
-                            <p class="card-text text-justify">
-                                The department is recognized by Anna University as Nodal Centre for research since 2010 and offers Ph.D program for both part-time and full-time scholars. We are well equipped with laboratories including RF & Microwave Lab, Communication System Lab, Signal Processing Lab, Networks Lab, Optical Communication Lab, VLSI and Embedded Lab.
-                            </p>
-                            <p class="card-text text-justify">
-                                The department consistently strives for overall development of students through career development and placement activities. Our faculty enrich their knowledge through continuing education, technical consultancy, and R&D. We have produced successful Electronics and Communication Engineers with prominent employers. We have two MODROBS grants from AICTE and a funded project from ISRO.
-                            </p>
-                        </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">About Conference</h2>
                     </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">About Conference</h2>
-                        </div>
-                        <div class="card-content">
-                            <p class="card-text text-justify">
-                                The International Conference on NextGen Engineering Technologies and Applications for Sustainable Development (ICNEXTS'25) is a prestigious global event organized by St. Joseph's College of Engineering, Chennai. The primary aim is to bring together leading researchers, academicians, industry professionals, and policymakers from across the world.
-                            </p>
-                            <p class="card-text text-justify">
-                                With a strong focus on next-generation technologies, the conference covers topics including 5G/6G communication systems, Artificial Intelligence, Internet of Things, Robotics, Quantum Computing, Cybersecurity, VLSI, Nanotechnology, and Renewable Energy Systems. These emerging fields address global challenges such as environmental sustainability and smart infrastructure.
-                            </p>
-                            <p class="card-text text-justify">
-                                ICNEXTS'25 provides a dynamic platform for professionals and young researchers to present original work, explore collaborative opportunities, and gain insights into latest trends. The conference promotes quality research aligned with UN Sustainable Development Goals, encouraging practical solutions for real-world problems.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Conference Tracks Section -->
-            <div style="margin-top: 4rem;">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 style="font-size: 2.25rem; font-weight: bold; color: #2563eb; margin-bottom: 1rem;">Conference Tracks</h2>
-                </div>
-
-                <div class="grid grid-cols-3">
-                    <!-- Track 1: Electronics Domain -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 style="font-size: 1.25rem; font-weight: bold; color: white;">Track 1: Electronics Domain</h3>
-                        </div>
-                        <div class="card-content">
-                            <ul class="track-list">
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Semiconductor Engineering</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">VLSI Design</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Advanced Materials and Nanotechnology</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Sustainable and Renewable Energy Systems</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Internet of Everything</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Robotics and Automation</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Image Processing</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Track 2: Communication Domain -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 style="font-size: 1.25rem; font-weight: bold; color: white;">Track 2: Communication Domain</h3>
-                        </div>
-                        <div class="card-content">
-                            <ul class="track-list">
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Signal Processing</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Cognitive Radio Networks</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Wireless Sensor Networks</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">5G & 6G Technologies</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Antenna Design & Smart RF Systems</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Space Technology and Satellite Applications</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Track 3: Computer Domain -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 style="font-size: 1.25rem; font-weight: bold; color: white;">Track 3: Computer Domain</h3>
-                        </div>
-                        <div class="card-content">
-                            <ul class="track-list">
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Cloud and Edge Computing</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Big Data Analytics and Data Science</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Machine Learning and Deep Learning</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">AI in Healthcare</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Cybersecurity and Data Privacy</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Blockchain</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Virtual Reality & Augmented Reality</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Quantum Computing</span>
-                                </li>
-                                <li class="track-item">
-                                    <span class="track-bullet"></span>
-                                    <span class="track-text">Computer Vision</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Important Dates Section -->
-            <div style="margin-top: 4rem;">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 style="font-size: 2.25rem; font-weight: bold; color: #2563eb; margin-bottom: 1rem;">Important Dates</h2>
-                </div>
-
-                <div class="grid grid-cols-4">
-                    <div class="date-card">
-                        <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        <h3 class="date-title">Paper Submission Deadline</h3>
-                        <p class="date-value">August 20th</p>
-                        <p class="date-year">2025</p>
-                    </div>
-
-                    <div class="date-card">
-                        <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                        <h3 class="date-title">Notification of Acceptance</h3>
-                        <p class="date-value">August 27th</p>
-                        <p class="date-year">2025</p>
-                    </div>
-
-                    <div class="date-card">
-                        <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        <h3 class="date-title">Registration Deadline</h3>
-                        <p class="date-value">September 5th</p>
-                        <p class="date-year">2025</p>
-                    </div>
-
-                    <div class="date-card">
-                        <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        <h3 class="date-title">Conference Date</h3>
-                        <p class="date-value">September 12th</p>
-                        <p class="date-year">2025</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Downloads Section -->
-            <div style="margin-top: 4rem;">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <h2 style="font-size: 2.25rem; font-weight: bold; color: #2563eb; margin-bottom: 1rem;">Downloads</h2>
-                </div>
-
-                <div class="grid grid-cols-4" style="max-width: 80rem; margin: 0 auto;">
-                    <div class="download-card">
-                        <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                        <h3 class="download-title">Download Brochure</h3>
-                    </div>
-
-                    <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" class="download-card">
-                        <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                        <h3 class="download-title">Download Paper Template</h3>
-                    </a>
-
-                    <div class="download-card">
-                        <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        <h3 class="download-title">Download Schedule</h3>
-                    </div>
-
-                    <div class="download-card">
-                        <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-                        </svg>
-                        <h3 class="download-title">Published Links</h3>
+                    <div class="card-content">
+                        <p class="card-text text-justify">
+                            The International Conference on NextGen Engineering Technologies and Applications for Sustainable Development (ICNEXTS'25) is a prestigious global event organized by St. Joseph's College of Engineering, Chennai. The primary aim is to bring together leading researchers, academicians, industry professionals, and policymakers from across the world.
+                        </p>
+                        <p class="card-text text-justify">
+                            With a strong focus on next-generation technologies, the conference covers topics including 5G/6G communication systems, Artificial Intelligence, Internet of Things, Robotics, Quantum Computing, Cybersecurity, VLSI, Nanotechnology, and Renewable Energy Systems. These emerging fields address global challenges such as environmental sustainability and smart infrastructure.
+                        </p>
+                        <p class="card-text text-justify">
+                            ICNEXTS'25 provides a dynamic platform for professionals and young researchers to present original work, explore collaborative opportunities, and gain insights into latest trends. The conference promotes quality research aligned with UN Sustainable Development Goals, encouraging practical solutions for real-world problems.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3 class="footer-title">ICNEXTS'25</h3>
-            <p class="footer-text">
-                © Copyright <span class="footer-highlight">St. Joseph's College of Engineering</span>. All Rights Reserved
-            </p>
+        <!-- Conference Tracks Section -->
+        <div style="margin-top: 4rem;">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 style="font-size: 2.25rem; font-weight: bold; color: #2563eb; margin-bottom: 1rem;">Conference Tracks</h2>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <!-- Track 1: Electronics Domain -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size: 1.25rem; font-weight: bold; color: white;">Track 1: Electronics Domain</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul class="track-list">
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Semiconductor Engineering</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">VLSI Design</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Advanced Materials and Nanotechnology</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Sustainable and Renewable Energy Systems</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Internet of Everything</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Robotics and Automation</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Image Processing</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Track 2: Communication Domain -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size: 1.25rem; font-weight: bold; color: white;">Track 2: Communication Domain</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul class="track-list">
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Signal Processing</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Cognitive Radio Networks</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Wireless Sensor Networks</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">5G & 6G Technologies</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Antenna Design & Smart RF Systems</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Space Technology and Satellite Applications</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Track 3: Computer Domain -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size: 1.25rem; font-weight: bold; color: white;">Track 3: Computer Domain</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul class="track-list">
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Cloud and Edge Computing</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Big Data Analytics and Data Science</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Machine Learning and Deep Learning</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">AI in Healthcare</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Cybersecurity and Data Privacy</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Blockchain</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Virtual Reality & Augmented Reality</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Quantum Computing</span>
+                            </li>
+                            <li class="track-item">
+                                <span class="track-bullet"></span>
+                                <span class="track-text">Computer Vision</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- Important Dates Section -->
+        <div style="margin-top: 4rem;">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 style="font-size: 2.25rem; font-weight: bold; color: #2563eb; margin-bottom: 1rem;">Important Dates</h2>
+            </div>
+
+            <div class="grid grid-cols-4">
+                <div class="date-card">
+                    <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="date-title">Paper Submission Deadline</h3>
+                    <p class="date-value">August 20th</p>
+                    <p class="date-year">2025</p>
+                </div>
+
+                <div class="date-card">
+                    <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="date-title">Notification of Acceptance</h3>
+                    <p class="date-value">August 27th</p>
+                    <p class="date-year">2025</p>
+                </div>
+
+                <div class="date-card">
+                    <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="date-title">Registration Deadline</h3>
+                    <p class="date-value">September 5th</p>
+                    <p class="date-year">2025</p>
+                </div>
+
+                <div class="date-card">
+                    <svg class="date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="date-title">Conference Date</h3>
+                    <p class="date-value">September 12th</p>
+                    <p class="date-year">2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Downloads Section -->
+        <div style="margin-top: 4rem;">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 style="font-size: 2.25rem; font-weight: bold; color: #2563eb; margin-bottom: 1rem;">Downloads</h2>
+            </div>
+
+            <div class="grid grid-cols-4" style="max-width: 80rem; margin: 0 auto;">
+                <div class="download-card">
+                    <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="download-title">Download Brochure</h3>
+                </div>
+
+                <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" class="download-card">
+                    <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="download-title">Download Paper Template</h3>
+                </a>
+
+                <div class="download-card">
+                    <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="download-title">Download Schedule</h3>
+                </div>
+
+                <div class="download-card">
+                    <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    </svg>
+                    <h3 class="download-title">Published Links</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="script.js"></script>
 </body>
 </html>

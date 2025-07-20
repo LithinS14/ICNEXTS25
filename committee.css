@@ -1,67 +1,3 @@
-/* Header Container */
-.header {
-  background: linear-gradient(to right, #1e40af, #3b82f6);
-  padding: 50px 20px;
-  text-align: center;
-  color: white;
-}
-
-/* Flex Wrapper for Logos and Text */
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-}
-
-/* Logos */
-.header-logo {
-  width: 120px;
-  height: auto;
-}
-
-/* Text Section */
-.header-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.header-text h1 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.header-text h2 {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin: 10px 0;
-}
-
-.header-text .date {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.header-text .organizer {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-.header-text .institution {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-
-
-
 /* Section title */
 .section-title {
   font-size: 2.5rem;
@@ -114,10 +50,19 @@
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  .section-title { font-size: 2rem; }
-  .section-header { font-size: 1.3rem; padding: 12px 15px; }
-  .member-name { font-size: 1rem; }
-  .member-role { font-size: 0.9rem; }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-header {
+    font-size: 1.3rem;
+    padding: 12px 15px;
+  }
+  .member-name {
+    font-size: 1rem;
+  }
+  .member-role {
+    font-size: 0.9rem;
+  }
 }
 
 /* Hidden class for collapse behavior */
