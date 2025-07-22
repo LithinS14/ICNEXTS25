@@ -157,7 +157,7 @@ body {
 .nav-menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center to flex-start */
   gap: 2rem;
   padding: 0.75rem 0;
   overflow-x: auto;
@@ -687,9 +687,9 @@ body {
   .date-card {
     height: 14rem;
   }
-  /* Adjust padding for nav-menu on very small screens */
+  /* Removed specific padding for nav-menu on very small screens */
   .nav-menu {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
