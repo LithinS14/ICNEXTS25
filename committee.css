@@ -48,6 +48,13 @@
   line-height: 1.4;
 }
 
+.member-qual {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #555;
+  margin-left: 6px;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .section-title {
