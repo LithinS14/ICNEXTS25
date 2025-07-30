@@ -348,3 +348,45 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.thrust-content {
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.thrust-main {
+  font-size: 1.125rem; /* 18px */
+  color: #475569;
+  margin-bottom: 1.5rem; /* 24px */
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.thrust-list {
+  list-style: none;
+  counter-reset: thrust-counter;
+  padding-left: 0;
+  margin: 0;
+}
+
+.thrust-list li {
+  counter-increment: thrust-counter;
+  position: relative;
+  padding-left: 2.5rem; /* 40px */
+  margin-bottom: 1rem; /* 16px */
+  font-size: 1rem; /* 16px */
+  color: #475569;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.thrust-list li::before {
+  content: counter(thrust-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: #2563eb; /* blue-600 */
+  font-size: 1.125rem; /* 18px */
+}
