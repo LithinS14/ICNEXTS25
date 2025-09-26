@@ -240,6 +240,8 @@ body {
 .fee-table-wrapper {
   overflow-x: auto; /* Allows horizontal scrolling on small screens */
   width: 100%;
+  max-width: 800px; /* Keeps table from getting too wide */
+  margin: 0 auto; /* Center the table */
   border-radius: 0.5rem; /* 8px */
   border: 1px solid #e2e8f0; /* slate-200 */
 }
@@ -247,13 +249,14 @@ body {
 .fee-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* Ensure table doesn't get too narrow */
+  min-width: 400px; /* was 600px */
+  font-size: 0.9rem; /* slightly smaller text */
 }
 
 .fee-table th,
 .fee-table td {
   border: 1px solid #e2e8f0; /* slate-200 */
-  padding: 1rem; /* 16px */
+  padding: 0.6rem 0.8rem; /* reduced padding */
   text-align: center;
 }
 
@@ -262,10 +265,43 @@ body {
   font-weight: 600;
   color: #1e293b;
   white-space: nowrap; /* Prevent header text from wrapping */
+  font-size: 0.95rem;
 }
 
 .fee-table td:first-child {
   text-align: left;
   font-weight: 500;
   color: #1e293b;
+  white-space: nowrap; /* keep category names in one line */
+}
+
+/* Added logo grid styling for better organization of indexing logos */
+.logo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Added bank details styling */
+.bank-details {
+  border: 1px solid #000; /* black border */
+  padding: 1rem 1.5rem; /* space inside box */
+  max-width: 400px; /* box width */
+  margin: 1.5rem auto; /* center horizontally */
+  text-align: center; /* center text */
+  font-size: 1rem; /* normal readable text */
+  line-height: 1.6; /* spacing between lines */
+  border-radius: 6px; /* slightly rounded corners */
+  /* background-color: #fafafa;   light background */
+}
+
+.bank-details p {
+  margin: 0.3rem 0; /* small spacing between lines */
 }

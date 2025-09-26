@@ -8,23 +8,51 @@
 </head>
 <body>
 <header class="header">
+    <!-- Added top banner image section for full-width college header -->
+    <div class="header-top-banner">
+        <img src="ENGG-HEADER.png" alt="ICNEXTS'25 Conference Banner" class="top-banner-image">
+    </div>
+
     <!-- Main Header Section -->
     <div class="header-main">
         <div class="header-content">
-            <!-- College Logo -->
-            <div class="logo-container">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Engg-Logo-New-c0hAbvnLguP5Ux5M1VbRpTufHpaRR0.png" alt="St. Joseph's College of Engineering Logo" class="logo">
+            <!-- Restructured layout to position cover image at left edge and center main content -->
+            <!-- Conference Cover Image positioned at leftmost edge -->
+            <div class="cover-image-container">
+                <img src="itmconf_cover.jpg" alt="ITM Conference Cover" class="cover-image">
             </div>
 
-            <!-- Conference Title -->
-            <div class="title-container">
-                <h1 class="main-title">ICNEXTS'25</h1>
-                <h2 class="subtitle">
-                    International Conference on NextGen Engineering Technologies and Applications for Sustainable Development
-                </h2>
-                <p>11<sup>th</sup> & 12<sup>th</sup> December 2025</p>
-                <p class="organized-by">Organised by</p>
-                <p class="college-name">St. Joseph's College of Engineering, Chennai, India</p>
+            <!-- Main content container for centered elements -->
+            <div class="main-content-container">
+                <!-- Conference Title -->
+                <div class="title-container">
+                    <div class="logo-title-container">
+                        <img src="logo.png" alt="ICNEXTS'25 Conference Logo" class="conference-logo">
+                    </div>
+                    <h2 class="subtitle">
+                        International Conference on NextGen Engineering Technologies and Applications for Sustainable Development
+                    </h2>
+                    <!-- Made date bold and larger with new class -->
+                    <p class="conference-date">11<sup>th</sup> & 12<sup>th</sup> December 2025</p>
+                    <p class="organized-by">Organised by</p>
+                    <!-- Added Electronics and Communication Department -->
+                    <p class="department-name">Electronics and Communication Department</p>
+                    <p class="college-name">St. Joseph's College of Engineering, Chennai, India</p>
+                    
+                    <!-- Added four sponsor images in a row -->
+                    <p class="indexed-text">Indexed in</p>
+                    <div class="sponsors-container">
+                        <img src="clarivate.png" alt="Sponsor 1" class="sponsor-image">
+                        <img src="doaj.png" alt="Sponsor 2" class="sponsor-image">
+                        <img src="proquest.png" alt="Sponsor 3" class="sponsor-image">
+                        <img src="google_scholar.png" alt="Sponsor 4" class="sponsor-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Logo positioned at right -->
+            <div class="logo-container">
+                <img src="iete_logo.png" alt="iete Logo" class="logo">
             </div>
         </div>
     </div>
@@ -49,7 +77,7 @@
         <div class="update-content">
             <span class="update-label">Latest Update</span>
             <span class="update-text">
-                Welcome to International Conference ICNEXTS'25 - Call for Papers now open! The last date for paper submission is 01<sup>th</sup> November 2025. 
+                Welcome to International Conference ICNEXTS'25 - Call for Papers now open! The last date for paper submission is 01<sup>st</sup> November 2025. 
             </span>
         </div>
     </div>

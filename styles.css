@@ -84,28 +84,83 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+.header-top-banner {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  /* Changed banner background to white to match image background */
+  background-color: white;
+}
+
+.top-banner-image {
+  width: 100%;
+  /* Increased height from 80px to 120px to prevent cropping */
+  height: 120px;
+  /* Changed from cover to contain to show full image without cropping */
+  object-fit: contain;
+  display: block;
+  /* Removed background-color since banner container now has white background */
+}
+
 .header-main {
-  background-color: #f9fafb;
+  /* Changed header main background to white to match banner */
+  background-color: white;
   color: #374151;
-  padding: 3rem 1rem;
+  /* Reduced top padding from 3rem to 2rem to decrease space between banner and logo */
+  padding: 2rem 1rem 3rem;
   border-bottom: 4px solid #1d4ed8;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* Changed from space-between to flex-start for proper alignment */
+  justify-content: flex-start;
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
+}
+
+/* New styles for cover image positioned at leftmost edge */
+.cover-image-container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cover-image {
+  /* Increased conference cover image size from 180px to 250px */
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* New container for main content to be properly centered */
+.main-content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 200px; /* Space for cover image and college logo */
 }
 
 .logo-container {
-  flex-shrink: 0;
+  /* Position college logo at right edge */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .logo {
-  width: 130px;
-  height: 130px;
+  /* Increased conference cover image size from 180px to 250px */
+  width: 250px;
+  height: 250px;
   object-fit: contain;
 }
 
@@ -119,6 +174,45 @@ body {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+}
+
+/* Added styles for conference logo to replace main title */
+.logo-title-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure full width for proper centering */
+}
+
+.conference-logo {
+  /* Increased ICNEXTS'25 logo size from 140px to 200px height and 450px to 600px width */
+  max-height: 200px;
+  max-width: 600px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  display: block; /* Ensure proper block display */
+  margin: 0 auto; /* Additional centering with auto margins */
+}
+
+/* Added styles for conference date to make it bold and larger */
+.conference-date {
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #374151;
+}
+
+/* Added styles for department name */
+.department-name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #2563eb;
 }
 
 .subtitle {
@@ -141,6 +235,44 @@ body {
 .college-name {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+/* Updated styles for "Indexed in" text - increased size and adjusted spacing */
+.indexed-text {
+  font-size: 1.75rem; /* Increased from 1.25rem to make it bigger */
+  font-weight: 600;
+  color: #2563eb;
+  text-align: center;
+  margin-top: 2rem; /* Added top margin to separate from college name */
+  margin-bottom: 0.5rem; /* Reduced from 1rem to stick closer to sponsors */
+}
+
+/* Reduced top margin of sponsors container to bring it closer to indexed text */
+.sponsors-container {
+  margin-top: 0.5rem; /* Reduced from 2rem to bring closer to indexed text */
+  display: flex;
+  /* Changed from center to space-between to span full width */
+  justify-content: space-between;
+  align-items: center;
+  /* Removed gap since space-between handles spacing */
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.sponsor-image {
+  /* Increased sponsor image size from 120px to 160px */
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.sponsor-image:hover {
+  transform: scale(1.05);
 }
 
 /* Navigation Styles */
@@ -622,8 +754,23 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .top-banner-image {
+    /* Increased mobile height from 60px to 90px */
+    height: 90px;
+    /* Changed from cover to contain for mobile */
+    object-fit: contain;
+  }
+
   .main-title {
     font-size: 2.5rem;
+  }
+
+  /* Added responsive styles for conference logo */
+  .conference-logo {
+    /* Increased mobile ICNEXTS'25 logo size from 100px to 150px height and 350px to 500px width */
+    max-height: 150px;
+    max-width: 500px;
+    margin: 0 auto; /* Maintain centering on mobile */
   }
 
   .subtitle {
@@ -659,18 +806,87 @@ body {
   }
 
   .header-content {
+    /* Stack elements vertically on mobile */
     flex-direction: column;
-    text-align: center;
+    position: static;
+  }
+
+  /* Reset positioning for mobile */
+  .cover-image-container,
+  .logo-container {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .main-content-container {
+    margin: 0;
+    order: 2;
+  }
+
+  .cover-image-container {
+    order: 1;
+  }
+
+  .logo-container {
+    order: 3;
+  }
+
+  .cover-image {
+    /* Increased mobile size from 150px to 200px */
+    width: 200px;
+    height: 200px;
   }
 
   .title-container {
     padding: 2rem 0 0;
   }
+
+  /* Added responsive sizing for larger logo on mobile */
+  .logo {
+    /* Increased mobile size from 150px to 200px */
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Added responsive styles for conference date */
+  .conference-date {
+    font-size: 1.25rem;
+  }
+
+  /* Added responsive styles for sponsors */
+  .sponsors-container {
+    /* Changed to wrap and center for mobile */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .sponsor-image {
+    /* Increased mobile sponsor size from 100px to 130px */
+    width: 130px;
+    height: 130px;
+  }
 }
 
 @media (max-width: 480px) {
+  .top-banner-image {
+    /* Increased small screen height from 50px to 70px */
+    height: 70px;
+    /* Changed from cover to contain for small screens */
+    object-fit: contain;
+  }
+
   .main-title {
     font-size: 2rem;
+  }
+
+  /* Added mobile responsive styles for conference logo */
+  .conference-logo {
+    /* Increased small screen ICNEXTS'25 logo size from 80px to 120px height and 300px to 400px width */
+    max-height: 120px;
+    max-width: 400px;
+    margin: 0 auto; /* Maintain centering on small screens */
   }
 
   .subtitle {
@@ -687,5 +903,34 @@ body {
 
   .date-card {
     height: 14rem;
+  }
+
+  /* Added responsive sizing for larger logo on small screens */
+  .logo {
+    /* Increased small screen size from 120px to 160px */
+    width: 160px;
+    height: 160px;
+  }
+
+  .cover-image {
+    /* Increased small screen size from 120px to 160px */
+    width: 160px;
+    height: 160px;
+  }
+
+  /* Added responsive styles for conference date on small screens */
+  .conference-date {
+    font-size: 1.125rem;
+  }
+
+  /* Added responsive styles for sponsors on small screens */
+  .sponsors-container {
+    gap: 1rem;
+  }
+
+  .sponsor-image {
+    /* Increased small screen sponsor size from 60px to 80px */
+    width: 110px;
+    height: 110px;
   }
 }
