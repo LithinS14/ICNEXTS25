@@ -752,6 +752,33 @@ body {
   margin-bottom: 0.75rem;
 }
 
+/* Added styles for highlighted conference title */
+.conference-title-highlight {
+  font-weight: bold !important;
+  color: #1d4ed8 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 1.75rem !important;
+  line-height: 1.4;
+}
+
+/* Added styles for SDG Goals logo container and logo */
+.sdg-container {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sdg-logo {
+  max-width: 300px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .top-banner-image {
@@ -867,6 +894,17 @@ body {
     width: 130px;
     height: 130px;
   }
+
+  /* Added responsive styles for conference title highlight */
+  .conference-title-highlight {
+    font-size: 1.375rem !important;
+  }
+
+  /* Added responsive styles for SDG logo */
+  .sdg-logo {
+    max-width: 250px;
+    max-height: 60px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -932,5 +970,16 @@ body {
     /* Increased small screen sponsor size from 60px to 80px */
     width: 110px;
     height: 110px;
+  }
+
+  /* Added responsive styles for conference title highlight on small screens */
+  .conference-title-highlight {
+    font-size: 1.125rem !important;
+  }
+
+  /* Added responsive styles for SDG logo on small screens */
+  .sdg-logo {
+    max-width: 200px;
+    max-height: 50px;
   }
 }
