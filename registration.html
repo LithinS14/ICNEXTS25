@@ -1,63 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration - ICNEXTS'25</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-      .registration-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          min-height: 400px; /* Adjust as needed */
-          text-align: center;
-          padding: 2rem;
-      }
-      .registration-content h1 {
-          font-size: 2.5rem;
-          color: #2563eb;
-          margin-bottom: 1.5rem;
-      }
-      .registration-content p {
-          font-size: 1.125rem;
-          color: #475569;
-          margin-bottom: 2rem;
-          max-width: 600px;
-      }
-      .registration-link {
-          display: inline-block;
-          background-color: #2563eb;
-          color: white;
-          padding: 1rem 2rem;
-          border-radius: 0.5rem;
-          text-decoration: none;
-          font-weight: bold;
-          transition: background-color 0.3s ease;
-      }
-      .registration-link:hover {
-          background-color: #1d4ed8;
-      }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration - ICNEXTS'25</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Fee Table Styling */
+    .fee-table-wrapper {
+        overflow-x: auto; /* Allows horizontal scrolling on small screens */
+        width: 100%;
+        max-width: 800px;  /* Keeps table from getting too wide */
+        margin: 1.25rem auto 2rem; /* add vertical margins to clear scrollbar from following text */
+        border-radius: 0.5rem; /* 8px */
+        border: 1px solid #e2e8f0; /* slate-200 */
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04); /* subtle elevation */
+        background: #ffffff; /* ensure white background when parent differs */
+    }
+
+    .fee-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 400px; /* was 600px */
+        font-size: 0.9rem; /* slightly smaller text */
+        background: #ffffff;
+    }
+
+    .fee-table th,
+    .fee-table td {
+        border: 1px solid #e2e8f0; /* slate-200 */
+        padding: 0.6rem 0.8rem; /* reduced padding */
+        text-align: center;
+        vertical-align: middle; /* cleaner alignment for multi-line headers */
+    }
+
+    .fee-table th {
+        background-color: #f1f5f9; /* slate-100 */
+        font-weight: 600;
+        color: #1e293b;
+        white-space: nowrap; /* Prevent header text from wrapping */
+        font-size: 0.95rem;
+    }
+
+    .fee-table td:first-child {
+        text-align: left;
+        font-weight: 500;
+        color: #1e293b;
+        white-space: nowrap; /* keep category names in one line */
+    }
+
+    .bank-details {
+        border: 1px solid #000;      /* black border */
+        padding: 1rem 1.5rem;        /* space inside box */
+        max-width: 400px;            /* box width */
+        margin: 1.5rem auto 1rem; /* add bottom space */
+        text-align: center;          /* center text */
+        font-size: 1rem;             /* normal readable text */
+        line-height: 1.5;            /* spacing between lines */
+        border-radius: 6px;          /* slightly rounded corners */
+        /* background-color: #fafafa;   light background */
+    }
+
+    .bank-details p {
+        margin: 0.3rem 0;            /* small spacing between lines */
+    }
+
+    .registration-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px; /* Adjust as needed */
+        text-align: center;
+        padding: 2rem;
+        gap: 0.75rem;            /* gentle vertical rhythm between elements */
+    }
+
+    .registration-content h1 {
+        font-size: 2.5rem;
+        color: #2563eb;
+        margin-bottom: 1rem;     /* slightly tighter to bring heading and section closer */
+    }
+
+    .registration-content p {
+        font-size: 1.125rem;
+        color: #475569;
+        margin-top: 0.5rem;
+        margin-bottom: 1.25rem;  /* consistent space between p and button */
+        max-width: 600px;
+    }
+
+    .registration-link {
+        display: inline-block;
+        background-color: #2563eb;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-top: 0.5rem;      /* ensure separation from previous paragraph */
+    }
+
+    .registration-link:hover {
+        background-color: #1d4ed8;
+    }
+
+    /* Container for consistent horizontal rhythm */
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1rem; /* side padding for small screens */
+    }
+
+    /* Section spacing */
+    .submission-section {
+        margin-top: 1.5rem;     /* add top space above table section */
+    }
+
+    .submission-heading {
+        margin: 0 0 1rem 0;     /* space under heading */
+        font-weight: 600;
+    }
+
+    /* Improve touch scrolling on mobile for horizontal table */
+    .fee-table-wrapper {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-gutter: stable both-edges; /* keep space for scrollbar and avoid overlap where supported */
+    }
+
+    @media (max-width: 640px) {
+        .submission-heading {
+            font-size: 1.05rem;
+        }
+    }
+</style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
+<div id="header-placeholder"></div>
 
-  <main class="registration-main">
-      <div class="container registration-content">
-          <h1>Registration for ICNEXTS'25</h1>
-          <p>
-              To register for the conference, please click the button below. You will be redirected to our secure Google Form for registration details and payment.
-          </p>
-          <a href="https://cmt3.research.microsoft.com/ICNEXTS2025/" target="_blank" class="registration-link">
-              Register Now
-          </a>
-          
-      </div>
-  </main>
+<main class="registration-main">
+    <div class="container registration-content">
+        <h1>Registration for ICNEXTS'25</h1>
+        <div class="submission-section">
+            <h3 class="submission-heading">Registration Fee Details</h3>
+            <div class="bank-details">
+                <p><strong>Bank Account Name :</strong> St.Joseph's College of Engineering Research and Development</p>
+                <p><strong>Account No :</strong> 705270386</p>
+                <p><strong>Bank Name :</strong> Indian Bank</p>
+                <p><strong>Bank Branch :</strong> Jeppiaar Engineering College, Semmencherry</p>
+                <p><strong>Branch Code :</strong> 01936</p>
+                <p><strong>IFSC Code :</strong> IDIB000J037</p>
+            </div>
 
-  <div id="footer-placeholder"></div>
-  <script src="script.js"></script>
+            <div class="fee-table-wrapper">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Category</th>
+                            <th colspan="2">Indian Delegates</th>
+                            <th colspan="2">International Delegates</th>
+                        </tr>
+                        <tr>
+                            <th>Early Bird Registration<br>(15/11/2025)</th>
+                            <th>Standard Registration <br>(25/11/2025)</th>
+                            <th>Early Bird Registration<br>(15/11/2025)</th>
+                            <th>Standard Registration <br>(25/11/2025)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Faculty/Industry Delegates</td>
+                            <td>INR 11,500</td>
+                            <td>INR 12,000</td>
+                            <td>USD 275</td>
+                            <td>USD 300</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Students/Research Scholars</td>
+                            <td>INR 10,500</td>
+                            <td>INR 11,000</td>
+                            <td>USD 250</td>
+                            <td>USD 275</td>
+                        </tr>
+                        <tr>
+                            <td>Conference Attendee</td>
+                            <td>INR 2,000</td>
+                            <td>INR 2,500</td>
+                            <td>USD 100</td>
+                            <td>USD 125</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                To register for the conference, please click the button below. You will be redirected to our secure Google Form for registration details and payment.
+            </p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="registration-link">
+                Register Now
+            </a>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="script.js"></script>
 </body>
 </html>

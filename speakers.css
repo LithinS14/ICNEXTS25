@@ -122,7 +122,7 @@ body {
 }
 
 .speaker-card:hover::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -267,7 +267,7 @@ body {
 }
 
 .speaker-card-linked:hover::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -353,6 +353,26 @@ body {
   opacity: 1;
 }
 
+/* Resume indicator styling for non-LinkedIn profiles */
+.resume-indicator {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(2, 6, 23, 0.15);
+  cursor: pointer;
+  z-index: 10;
+  outline: none !important;
+}
+
+.speaker-card-linked:hover .resume-indicator {
+  opacity: 1;
+}
+
 /* Ensure proper pointer events */
 .speaker-card-linked * {
   pointer-events: none;
@@ -365,7 +385,8 @@ body {
 
 .linkedin-indicator,
 .scholar-indicator,
-.portfolio-indicator {
+.portfolio-indicator,
+.resume-indicator {
   pointer-events: auto !important;
 }
 
@@ -460,6 +481,18 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Staggered animation for cards */
 .speaker-card {
   opacity: 0;
@@ -492,18 +525,6 @@ body {
   animation: shimmer 1.5s ease-in-out infinite;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* Complete removal of all possible selectors */
 .speaker-card,
 .speaker-card *,
@@ -519,7 +540,8 @@ body {
 .image-overlay,
 .linkedin-indicator,
 .scholar-indicator,
-.portfolio-indicator {
+.portfolio-indicator,
+.resume-indicator {
   outline: none !important;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-focus-ring-color: transparent !important;
