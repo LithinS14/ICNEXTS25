@@ -983,3 +983,152 @@ body {
     max-height: 50px;
   }
 }
+/* Added styling for the updated banner and date elements */
+
+/* Added styling for the updated banner and date elements */
+
+/* Update Banner Styles */
+.update-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.update-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.update-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.update-label {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  display: inline-block;
+}
+
+.update-text-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.update-text {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.conference-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.highlight-date {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Added extended deadline line styling in banner */
+.extended-deadline-line {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.extended-deadline-text {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+}
+
+/* Strikethrough Date Styling */
+.strikethrough-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.strikethrough-date {
+  position: relative;
+  color: #999;
+  margin: 0;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+.red-cross-line {
+  width: 100%;
+  height: 20px;
+  stroke: #dc2626;
+  stroke-width: 3;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.6));
+}
+
+/* Added new date value styling for the date card */
+.new-date-value {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.extended-label {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .update-banner {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .update-text {
+    font-size: 0.9rem;
+  }
+
+  .conference-title {
+    font-size: 1rem;
+  }
+
+  .highlight-date {
+    font-size: 0.95rem;
+  }
+
+  .red-cross-line {
+    height: 15px;
+    stroke-width: 2.5;
+  }
+
+  .extended-deadline-text {
+    font-size: 0.85rem;
+  }
+
+  .new-date-value {
+    font-size: 1rem;
+  }
+}
